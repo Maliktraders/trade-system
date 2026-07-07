@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malik Traders</title>
+
+<style>
+body{
+background:#111827;
+font-family:Arial;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+.box{
+background:#1f2937;
+padding:20px;
+border-radius:15px;
+max-width:400px;
+margin:auto;
+}
+
+button{
+background:#22c55e;
+border:none;
+padding:15px;
+width:100%;
+font-size:18px;
+color:white;
+border-radius:10px;
+margin-top:20px;
+}
+
+.trade{
+display:none;
+background:#374151;
+padding:15px;
+margin-top:20px;
+border-radius:10px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+
+<h1>Malik Traders</h1>
+
+<p>Premium Option Trade</p>
+
+<button onclick="showTrade()">
+Unlock Demo Trade
+</button>
+
+<div class="trade" id="trade">
+<h2>NIFTY BUY</h2>
+<p>Entry : 25100</p>
+<p>Stop Loss : 25070</p>
+<p>Target : 25220</p>
+</div>
+
+</div>
+
+<script>
+function showTrade(){
+document.getElementById("trade").style.display="block";
+}
+</script>
+
+</body>
+</html>
