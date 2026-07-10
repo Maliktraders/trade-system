@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malik Traders - Performance</title>
+
+<style>
+body{
+margin:0;
+background:#0d1117;
+font-family:Arial,sans-serif;
+color:white;
+}
+
+nav{
+background:#111827;
+padding:15px;
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.container{
+max-width:900px;
+margin:40px auto;
+padding:20px;
+}
+
+.card{
+background:#161b22;
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+text-align:center;
+}
+
+h1{
+text-align:center;
+}
+
+.green{
+color:#00e676;
+}
+
+.red{
+color:#ff5252;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">🏠 Home</a>
+<a href="performance.html">📊 Performance</a>
+<a href="login.html">👑 Login</a>
+</nav>
+
+<div class="container">
+
+<h1>📊 Malik Traders Performance</h1>
+
+<div class="card">
+<h2>Total Trades</h2>
+<h1 id="totalTrades">0</h1>
+</div>
+
+<div class="card">
+<h2 class="green">Winning Trades</h2>
+<h1 id="winningTrades">0</h1>
+</div>
+
+<div class="card">
+<h2 class="red">Losing Trades</h2>
+<h1 id="losingTrades">0</h1>
+</div>
+
+<div class="card">
+<h2>Accuracy</h2>
+<h1 id="accuracy">0%</h1>
+</div>
+
+<div class="card">
+<h2>Total Points</h2>
+<h1 id="totalPoints">0</h1>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malik Traders Admin</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0d1117;
+color:white;
+padding:30px;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+}
+
+h1{
+text-align:center;
+margin-bottom:30px;
+color:#00e676;
+}
+
+h2{
+margin-top:25px;
+margin-bottom:10px;
+color:#ffd54f;
+}
+
+input,
+select{
+width:100%;
+padding:14px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+font-size:16px;
+background:#fff;
+color:#000;
+}
+
+button{
+width:100%;
+padding:15px;
+margin-top:10px;
+background:#00c853;
+color:#fff;
+font-size:18px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#00e676;
+color:#000;
+}
+
+#logoutBtn{
+background:#ff3b30;
+}
+
+#logoutBtn:hover{
+background:#ff6b60;
+color:#fff;
+}
+
+hr{
+margin:25px 0;
+border:1px solid #333;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📈 Malik Traders Admin</h1>
+
+<input id="signal" placeholder="BUY / SELL">
+
+<input id="entry" placeholder="Entry Price">
+
+<input id="sl" placeholder="Stop Loss">
+
+<input id="target1" placeholder="Target 1">
+
+<input id="target2" placeholder="Target 2">
+
+<select id="status">
+
+<option>ACTIVE</option>
+
+<option>TARGET HIT</option>
+
+<option>STOPLOSS HIT</option>
+
+<option>CLOSED</option>
+
+</select>
+
+<button id="saveBtn">
+💾 Save Signal
+</button>
+
+<hr>
+
+<h2>📢 Website Notice</h2>
+
+<input
+id="noticeText"
+placeholder="Enter Website Notice">
+
+<button id="saveNotice">
+📢 Save Notice
+</button>
+
+<hr style="margin:25px 0;">
+
+<h2>📢 Broadcast Message</h2>
+
+<input
+id="broadcastText"
+placeholder="Type Broadcast Message">
+
+<button id="saveBroadcast">
+📢 Send Broadcast
+</button>
+
+<br><br>
+
+<button id="logoutBtn">
+🚪 Logout
+</button>
+
+</div>
+
+<script type="module">
+import {
+db,
+doc,
+setDoc,
+collection,
+addDoc
+} from "./firebase.js";
+
+const saveBtn = document.getElementById("saveBtn");
+const saveNotice = document.getElementById("saveNotice");
+
+// Save Live Signal
+saveBtn.addEventListener("click", async()=>{
+
+const signal=document.getElementById("signal").value;
+const entry=document.getElementById("entry").value;
+const sl=document.getElementById("sl").value;
+const target1=document.getElementById("target1").value;
+const target2=document.getElementById("target2").value;
+const status=document.getElementById("status").value;
+
+const data={
+signal,
+entry,
+sl,
+target1,
+target2,
+status,
+updatedAt:new Date().toISOString()
+};
+
+try{
+
+await setDoc(doc(db,"signals","live"),data);
+
+await addDoc(collection(db,"history"),data);
+
+alert("✅ Signal Saved Successfully");
+
+}catch(err){
+
+console.error(err);
+
+alert("❌ "+err.message);
+
+}
+
+});
+// Broadcast Message
+
+const saveBroadcast = document.getElementById("saveBroadcast");
+
+saveBroadcast.addEventListener("click", async()=>{
+
+const message = document.getElementById("broadcastText").value;
+
+try{
+
+await setDoc(doc(db,"settings","broadcast"),{
+message:message
+});
+
+alert("📢 Broadcast Sent");
+
+}catch(err){
+
+console.error(err);
+
+alert("❌ "+err.message);
+
+}
+
+});
+
+// Save Website Notice
+saveNotice.addEventListener("click",async()=>{
+
+const text=document.getElementById("noticeText").value;
+
+try{
+
+await setDoc(doc(db,"settings","notice"),{
+
+text:text
+
+});
+
+alert("📢 Notice Updated");
+
+}catch(err){
+
+console.error(err);
+
+alert("❌ "+err.message);
+
+}
+
+});
+
+</script>
+
+<script type="module" src="admin-auth.js"></script>
+
+<script type="module" src="logout.js"></script>
+
+</body>
+</html>
+
+import {
+db,
+doc,
+setDoc,
+collection,
+addDoc
+} from "./firebase.js";
+
+const saveBtn=document.getElementById("saveBtn");
+
+saveBtn.addEventListener("click",async()=>{
+
+const signal=document.getElementById("signal").value;
+const entry=document.getElementById("entry").value;
+const sl=document.getElementById("sl").value;
+const target1=document.getElementById("target1").value;
+const target2=document.getElementById("target2").value;
+const status=document.getElementById("status").value;
+
+const data={
+signal,
+entry,
+sl,
+target1,
+target2,
+status,
+updatedAt:new Date().toISOString()
+};
+
+try{
+
+// Live Signal
+await setDoc(doc(db,"signals","live"),data);
+
+// History
+await addDoc(collection(db,"history"),data);
+
+alert("✅ Signal Saved + History Updated");
+
+}catch(err){
+
+console.error(err);
+alert("❌ "+err.message);
+
+}
+
+});
+
+</script>
+
+<script type="module" src="admin-auth.js"></script>
+<script type="module" src="logout.js"></script>
+</body>
+</html>

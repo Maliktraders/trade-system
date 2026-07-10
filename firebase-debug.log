@@ -1,0 +1,47 @@
+[debug] [2026-07-08T16:53:43.823Z] ----------------------------------------------------------------------
+[debug] [2026-07-08T16:53:43.825Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\faisa\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2026-07-08T16:53:43.826Z] CLI Version:   15.22.4
+[debug] [2026-07-08T16:53:43.826Z] Platform:      win32
+[debug] [2026-07-08T16:53:43.826Z] Node Version:  v24.18.0
+[debug] [2026-07-08T16:53:43.826Z] Detected Agent: unknown
+[debug] [2026-07-08T16:53:43.826Z] Time:          Wed Jul 08 2026 22:23:43 GMT+0530 (India Standard Time)
+[debug] [2026-07-08T16:53:43.826Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-07-08T16:53:45.757Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-07-08T16:53:45.757Z] > authorizing via signed-in user (faisalmalik2597@gmail.com)
+[debug] [2026-07-08T16:53:45.757Z] [iam] checking project maliktraders-b8cd7 for permissions ["firebase.projects.get"]
+[debug] [2026-07-08T16:53:45.758Z] Checked if tokens are valid: true, expires at: 1783532902367
+[debug] [2026-07-08T16:53:45.758Z] Checked if tokens are valid: true, expires at: 1783532902367
+[debug] [2026-07-08T16:53:45.759Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/maliktraders-b8cd7:testIamPermissions [none]
+[debug] [2026-07-08T16:53:45.759Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/maliktraders-b8cd7:testIamPermissions  x-goog-user-project=maliktraders-b8cd7
+[debug] [2026-07-08T16:53:45.759Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/maliktraders-b8cd7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2026-07-08T16:53:47.218Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/maliktraders-b8cd7:testIamPermissions 200
+[debug] [2026-07-08T16:53:47.218Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/maliktraders-b8cd7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2026-07-08T16:53:47.220Z] Checked if tokens are valid: true, expires at: 1783532902367
+[debug] [2026-07-08T16:53:47.220Z] Checked if tokens are valid: true, expires at: 1783532902367
+[debug] [2026-07-08T16:53:47.220Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/maliktraders-b8cd7 [none]
+[debug] [2026-07-08T16:53:47.559Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/maliktraders-b8cd7 200
+[debug] [2026-07-08T16:53:47.559Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/maliktraders-b8cd7 {"projectNumber":"392057399155","projectId":"maliktraders-b8cd7","lifecycleState":"ACTIVE","name":"MalikTraders","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-07-07T10:33:27.098Z"}
+[info] 
+[info] === Serving from 'C:\Users\faisa\OneDrive\Desktop\trade system'...
+[info] 
+[debug] [2026-07-08T16:53:47.565Z] Checked if tokens are valid: true, expires at: 1783532902367
+[debug] [2026-07-08T16:53:47.565Z] Checked if tokens are valid: true, expires at: 1783532902367
+[debug] [2026-07-08T16:53:47.565Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/maliktraders-b8cd7/sites 
+[debug] [2026-07-08T16:53:48.959Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/maliktraders-b8cd7/sites 200
+[debug] [2026-07-08T16:53:48.959Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/maliktraders-b8cd7/sites {"sites":[{"name":"projects/maliktraders-b8cd7/sites/maliktraders-b8cd7","defaultUrl":"https://maliktraders-b8cd7.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2026-07-08T16:53:48.959Z] Checked if tokens are valid: true, expires at: 1783532902367
+[debug] [2026-07-08T16:53:48.959Z] Checked if tokens are valid: true, expires at: 1783532902367
+[debug] [2026-07-08T16:53:48.960Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/maliktraders-b8cd7/webApps/-/config [none]
+[debug] [2026-07-08T16:53:50.381Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/maliktraders-b8cd7/webApps/-/config 200
+[debug] [2026-07-08T16:53:50.381Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/maliktraders-b8cd7/webApps/-/config {"projectId":"maliktraders-b8cd7","appId":"1:392057399155:web:d1330a01c25ea6c9a28706","storageBucket":"maliktraders-b8cd7.firebasestorage.app","apiKey":"AIzaSyAGN33xN5mWNi_JQvkx94cSlRRw7n-QZkQ","authDomain":"maliktraders-b8cd7.firebaseapp.com","messagingSenderId":"392057399155","projectNumber":"392057399155","version":"2"}
+[debug] [2026-07-08T16:53:50.392Z] Checked if tokens are valid: true, expires at: 1783532902367
+[debug] [2026-07-08T16:53:50.392Z] Checked if tokens are valid: true, expires at: 1783532902367
+[debug] [2026-07-08T16:53:50.392Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/maliktraders-b8cd7 [none]
+[debug] [2026-07-08T16:53:50.765Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/maliktraders-b8cd7 200
+[debug] [2026-07-08T16:53:50.766Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/maliktraders-b8cd7 {"projectId":"maliktraders-b8cd7","projectNumber":"392057399155","displayName":"MalikTraders","name":"projects/maliktraders-b8cd7","resources":{"hostingSite":"maliktraders-b8cd7"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_9b820281-8f7e-4127-b246-a8117ee8b9c0"}
+[info] +  hosting[maliktraders-b8cd7]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: ::1 - - [08/Jul/2026:16:54:39 +0000] "GET / HTTP/1.1" 200 762 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [08/Jul/2026:16:54:39 +0000] \"GET / HTTP/1.1\" 200 762 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0\""}}
+[info] i  hosting: ::1 - - [08/Jul/2026:16:54:39 +0000] "GET /script.js HTTP/1.1" 200 915 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [08/Jul/2026:16:54:39 +0000] \"GET /script.js HTTP/1.1\" 200 915 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0\""}}
+[info] i  hosting: ::1 - - [08/Jul/2026:16:54:39 +0000] "GET /style.css HTTP/1.1" 200 586 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [08/Jul/2026:16:54:39 +0000] \"GET /style.css HTTP/1.1\" 200 586 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0\""}}
+[info] i  hosting: ::1 - - [08/Jul/2026:16:54:39 +0000] "GET /favicon.ico HTTP/1.1" 404 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [08/Jul/2026:16:54:39 +0000] \"GET /favicon.ico HTTP/1.1\" 404 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0\""}}
