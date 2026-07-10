@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Malik Traders Premium</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+background:#0d1117;
+color:white;
+font-family:Arial,sans-serif;
+margin:0;
+}
+
+nav{
+background:#111827;
+padding:15px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:25px;
+}
+
+.card{
+background:#161b22;
+padding:20px;
+border-radius:12px;
+margin-bottom:20px;
+}
+
+.card h2{
+margin-bottom:15px;
+color:#00e676;
+}
+
+.status{
+font-size:20px;
+font-weight:bold;
+}
+
+.active{
+color:#00e676;
+}
+
+.closed{
+color:#ff5252;
+}
+
+button{
+width:100%;
+padding:15px;
+font-size:18px;
+border:none;
+border-radius:8px;
+background:#00c853;
+color:white;
+cursor:pointer;
+margin-top:15px;
+}
+
+button:hover{
+background:#00e676;
+color:black;
+}
+
+.plan{
+color:#ffd54f;
+font-size:18px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="history.html">📜 History</a>
+
+<a href="performance.html">📊 Performance</a>
+
+<a href="contact.html">📞 Contact</a>
+
+</nav>
+
+<div class="container">
+
+<h1 align="center">
+👑 Premium Dashboard
+</h1>
+
+<div class="card">
+
+<h2>Today's Premium Signal</h2>
+
+<p><b>Signal :</b> <span id="signal">Loading...</span></p>
+
+<p><b>Entry :</b> <span id="entry">Loading...</span></p>
+
+<p><b>Stop Loss :</b> <span id="sl">Loading...</span></p>
+
+<p><b>Target 1 :</b> <span id="target1">Loading...</span></p>
+
+<p><b>Target 2 :</b> <span id="target2">Loading...</span></p>
+
+<p>
+<b>Status :</b>
+
+<span
+id="status"
+class="status">
+Loading...
+</span>
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Membership</h2>
+
+<p class="plan">
+
+💎 Plan :
+<span id="planName">
+Monthly Premium
+</span>
+
+</p>
+
+<p>
+
+📅 Expiry :
+
+<span id="expiry">
+
+30 Days
+
+</span>
+
+</p>
+
+</div>
+
+<button onclick="window.location.href='payment.html'">
+
+Upgrade Membership
+
+</button>
+
+</div>
+
+<script type="module" src="premium.js"></script>
+
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Malik Traders Premium</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+background:#0d1117;
+color:white;
+font-family:Arial,sans-serif;
+margin:0;
+}
+
+nav{
+background:#111827;
+padding:15px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:25px;
+}
+
+.card{
+background:#161b22;
+padding:20px;
+border-radius:12px;
+margin-bottom:20px;
+}
+
+.card h2{
+margin-bottom:15px;
+color:#00e676;
+}
+
+.status{
+font-size:20px;
+font-weight:bold;
+}
+
+.active{
+color:#00e676;
+}
+
+.closed{
+color:#ff5252;
+}
+
+button{
+width:100%;
+padding:15px;
+font-size:18px;
+border:none;
+border-radius:8px;
+background:#00c853;
+color:white;
+cursor:pointer;
+margin-top:15px;
+}
+
+button:hover{
+background:#00e676;
+color:black;
+}
+
+.plan{
+color:#ffd54f;
+font-size:18px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="history.html">📜 History</a>
+
+<a href="performance.html">📊 Performance</a>
+
+<a href="contact.html">📞 Contact</a>
+
+</nav>
+
+<div class="container">
+
+<h1 align="center">
+👑 Premium Dashboard
+</h1>
+
+<div class="card">
+
+<h2>Today's Premium Signal</h2>
+
+<p><b>Signal :</b> <span id="signal">Loading...</span></p>
+
+<p><b>Entry :</b> <span id="entry">Loading...</span></p>
+
+<p><b>Stop Loss :</b> <span id="sl">Loading...</span></p>
+
+<p><b>Target 1 :</b> <span id="target1">Loading...</span></p>
+
+<p><b>Target 2 :</b> <span id="target2">Loading...</span></p>
+
+<p>
+<b>Status :</b>
+
+<span
+id="status"
+class="status">
+Loading...
+</span>
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Membership</h2>
+
+<p class="plan">
+
+💎 Plan :
+<span id="planName">
+Monthly Premium
+</span>
+
+</p>
+
+<p>
+
+📅 Expiry :
+
+<span id="expiry">
+
+30 Days
+
+</span>
+
+</p>
+
+</div>
+
+<button onclick="window.location.href='payment.html'">
+
+Upgrade Membership
+
+</button>
+
+</div>
+<div id="broadcast"
+style="
+background:#ff3b30;
+color:white;
+padding:12px;
+border-radius:8px;
+font-weight:bold;
+margin:20px 0;
+text-align:center;
+">
+
+</div>
+
+<script type="module" src="broadcast.js"></script>
+<script type="module" src="premium.js"></script>
+
+</body>
+
+</html>

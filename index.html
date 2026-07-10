@@ -5,70 +5,162 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Malik Traders</title>
 
-<style>
-body{
-background:#111827;
-font-family:Arial;
-color:white;
-text-align:center;
-padding:30px;
-}
-
-.box{
-background:#1f2937;
-padding:20px;
-border-radius:15px;
-max-width:400px;
-margin:auto;
-}
-
-button{
-background:#22c55e;
-border:none;
-padding:15px;
-width:100%;
-font-size:18px;
-color:white;
-border-radius:10px;
-margin-top:20px;
-}
-
-.trade{
-display:none;
-background:#374151;
-padding:15px;
-margin-top:20px;
-border-radius:10px;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
-<div class="box">
+<nav style="background:#111827;padding:15px;display:flex;justify-content:center;gap:25px;flex-wrap:wrap;">
 
-<h1>Malik Traders</h1>
+<a href="index.html" style="color:white;text-decoration:none;font-weight:bold;">
+🏠 Home
+</a>
 
-<p>Premium Option Trade</p>
+<a href="performance.html" style="color:white;text-decoration:none;font-weight:bold;">
+📊 Performance
+</a>
 
-<button onclick="showTrade()">
-Unlock Demo Trade
+<a href="login.html" style="color:white;text-decoration:none;font-weight:bold;">
+👑 Premium Login
+</a>
+<a href="market.html">📈 Live Market</a>
+
+<a href="contact.html" style="color:white;text-decoration:none;font-weight:bold;">
+📞 Contact
+</a>
+
+</nav>
+
+<div class="container">
+
+<h1>📈 Malik Traders</h1>
+<div id="notice"
+style="
+background:#ffd54f;
+color:#000;
+padding:12px;
+border-radius:8px;
+font-weight:bold;
+margin:20px 0;
+text-align:center;
+">
+
+Loading Notice...
+
+</div>
+<div id="broadcast"
+style="
+background:#ff3b30;
+color:white;
+padding:12px;
+border-radius:8px;
+font-weight:bold;
+margin:15px 0;
+text-align:center;
+">
+
+</div>
+
+<div class="card">
+
+<h2 style="text-align:center;color:#ffd700;">
+🔒 Today's Premium Signal
+</h2>
+
+<p style="text-align:center;font-size:18px;line-height:30px;">
+
+Today's Premium Trade is Locked.
+
+<br><br>
+
+Purchase Premium Membership to Unlock Today's Live Signal.
+
+</p>
+
+<button onclick="window.location.href='payment.html'">
+
+👑 Unlock Premium Signal
+
 </button>
 
-<div class="trade" id="trade">
-<h2>NIFTY BUY</h2>
-<p>Entry : 25100</p>
-<p>Stop Loss : 25070</p>
-<p>Target : 25220</p>
-</div>
+<button onclick="window.location.href='login.html'">
+👑 Premium Signal
+</button>
 
 </div>
+</div>
 
-<script>
-function showTrade(){
-document.getElementById("trade").style.display="block";
-}
-</script>
+<hr style="margin:40px 0;">
 
+<h2 style="text-align:center;color:#00e676;">
+⭐⭐⭐⭐⭐ Client Reviews
+</h2>
+
+<div class="card">
+
+<h3>⭐⭐⭐⭐⭐ Rahul Sharma</h3>
+
+<p>
+Malik Traders Premium Signals are very accurate.
+Highly Recommended.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>⭐⭐⭐⭐⭐ Amit Verma</h3>
+
+<p>
+Best Trading Service.
+Very Professional Team.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>⭐⭐⭐⭐⭐ Vikas Singh</h3>
+
+<p>
+Excellent Risk Management.
+Worth Every Penny.
+</p>
+
+</div>
+<footer style="
+background:#111827;
+margin-top:50px;
+padding:25px;
+text-align:center;
+color:#9ca3af;
+font-size:15px;
+">
+
+<a href="privacy.html" style="color:#00e676;text-decoration:none;margin:10px;">
+Privacy Policy
+</a>
+
+|
+
+<a href="terms.html" style="color:#00e676;text-decoration:none;margin:10px;">
+Terms & Conditions
+</a>
+
+|
+
+<a href="contact.html" style="color:#00e676;text-decoration:none;margin:10px;">
+Contact
+</a>
+
+<br><br>
+
+© 2026 Malik Traders. All Rights Reserved.
+
+</footer>
+<script type="module" src="firebase.js"></script>
+<script type="module" src="script.js"></script>
+<script type="module" src="broadcast.js"></script>
 </body>
 </html>

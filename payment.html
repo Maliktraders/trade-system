@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malik Traders Premium</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0d1117;
+color:white;
+}
+
+nav{
+background:#111827;
+padding:15px;
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:30px;
+}
+
+h1{
+text-align:center;
+margin-bottom:30px;
+color:#00e676;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.card{
+background:#161b22;
+padding:25px;
+border-radius:12px;
+text-align:center;
+border:1px solid #2d333b;
+}
+
+.card h2{
+margin-bottom:15px;
+}
+
+.price{
+font-size:38px;
+font-weight:bold;
+color:#00e676;
+margin:20px 0;
+}
+
+ul{
+list-style:none;
+text-align:left;
+margin:20px 0;
+}
+
+ul li{
+padding:8px 0;
+}
+
+button{
+width:100%;
+padding:15px;
+font-size:18px;
+background:#00c853;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#00e676;
+color:black;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="performance.html">📊 Performance</a>
+
+<a href="payment.html">💎 Premium</a>
+
+<a href="contact.html">📞 Contact</a>
+
+</nav>
+
+<div class="container">
+
+<h1>💎 Malik Traders Premium Plans</h1>
+
+<div class="cards">
+
+<div class="card">
+
+<h2>🎯 Single Trade</h2>
+
+<div class="price">₹999</div>
+
+<ul>
+<li>✅ 1 Premium Trade</li>
+<li>✅ Entry + SL + Target</li>
+<li>✅ Instant Access</li>
+</ul>
+
+<button onclick="buyPlan('single',999)">
+Buy Now
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>📅 1 Day Pass</h2>
+
+<div class="price">₹1,499</div>
+
+<ul>
+<li>✅ Unlimited Signals</li>
+<li>✅ Valid For 1 Day</li>
+<li>✅ Live Updates</li>
+</ul>
+
+<button onclick="buyPlan('day',1499)">
+Buy Now
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>⚡ 15 Days Premium</h2>
+
+<div class="price">₹13,999</div>
+
+<ul>
+<li>✅ 15 Days Access</li>
+<li>✅ All Premium Signals</li>
+<li>✅ Live Updates</li>
+</ul>
+
+<button onclick="buyPlan('15days',13999)">
+Buy Now
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>👑 1 Month Premium</h2>
+
+<div class="price">₹24,999</div>
+
+<ul>
+<li>✅ 30 Days Access</li>
+<li>✅ All Premium Signals</li>
+<li>✅ Priority Support</li>
+</ul>
+
+<button onclick="buyPlan('month',24999)">
+Buy Now
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>💎 3 Months Premium</h2>
+
+<div class="price">
+₹59,999
+<br>
+<small><del>₹74,997</del></small>
+</div>
+
+<ul>
+<li>✅ 90 Days Access</li>
+<li>✅ Premium Signals</li>
+<li>✅ Priority Support</li>
+</ul>
+
+<button onclick="buyPlan('3months',59999)">
+Buy Now
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>🔥 6 Months Premium</h2>
+
+<div class="price">
+₹99,999
+<br>
+<small><del>₹1,49,994</del></small>
+</div>
+
+<ul>
+<li>✅ 180 Days Access</li>
+<li>✅ Premium Signals</li>
+<li>✅ VIP Support</li>
+</ul>
+
+<button onclick="buyPlan('6months',99999)">
+Buy Now
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>🏆 12 Months Premium</h2>
+
+<div class="price">
+₹1,39,999
+<br>
+<small><del>₹2,99,988</del></small>
+</div>
+
+<ul>
+<li>✅ 365 Days Access</li>
+<li>✅ All Premium Signals</li>
+<li>✅ VIP Priority Support</li>
+</ul>
+
+<button onclick="buyPlan('12months',139999)">
+Buy Now
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function buyPlan(plan,amount){
+
+localStorage.setItem("plan",plan);
+localStorage.setItem("amount",amount);
+
+window.location.href="checkout.html";
+
+}
+
+</script>
+
+</body>
+</html>
